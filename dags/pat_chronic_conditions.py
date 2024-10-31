@@ -76,12 +76,18 @@ class CargaDadosDAG:
             """
 
             cursor.execute(query)
-            results = cursor.fetchone()
+            results = cursor.fetchall()
 
-            with open('/opt/airflow/dags/core/resultados/pat_chronic_conditions.csv', mode='w', newline='') as file:
+            print(f"Segue os resultados: {results}")
+
+            fname = "dags/core/resultados/core/resultados/pat_chronic_conditions.csv"
+            print(f'CAMINHO: {os.path.abspath(fname)}')
+
+            with open(f"{os.path.abspath(fname)}", mode='w', newline='') as file:
                 writer = csv.writer(file)       
-                writer.writerow(["chronic_kidney_disease", "diabetes_mellitus", "dyslipidemia", "hypertension", "obesity"])      
-                writer.writerow(results)
+                writer.writerow(["qtd", "medicament", "condition"])      
+                for row in results:
+                    writer.writerow(row)
 
             print("Os resultados foram salvos")
 

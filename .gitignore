@@ -1,0 +1,4 @@
+logs/*
+dags/_pycache_/*
+dags/__pycache__/*
+dags/core/*

@@ -34,10 +34,10 @@ class CargaDadosDAG:
             except ValueError:
                 return None
 
-        fname = "file1.txt"
+        fname = "dags/core/raw/core/raw/caduceus.consolidation_anonymized.json"
         print(f'CAMINHO: {os.path.abspath(fname)}')
 
-        with open("/opt/airflow/dags/core/raw/caduceus.consolidation_anonymized.json", "r", encoding="utf-8", errors="ignore") as file:
+        with open(f"{os.path.abspath(fname)}", "r", encoding="utf-8", errors="ignore") as file:
         #with open(self.file_path, "r", encoding="utf-8", errors="ignore") as file:
             data = json.load(file)
 
