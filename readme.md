@@ -1,5 +1,5 @@
 
-# Processa dados csv para PostgresSQL usando container com Airflow e PostgresSQL.
+# Processa dados csv para PostgresSQL.
 
 Este projeto realiza a consolidação e análise de dados a partir de arquivos JSON e gera resultados em arquivos CSV. Utilizamos o Airflow para orquestração dos fluxos de trabalho e o PostgreSQL para armazenamento dos dados.
 
