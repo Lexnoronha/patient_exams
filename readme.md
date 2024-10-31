@@ -53,7 +53,7 @@ Este projeto realiza a consolidação e análise de dados a partir de arquivos J
    - Caso ocorra um erro de conexão com o Postgres, verificar as credenciais do banco (definidas no `docker-compose.yaml`) para o IP do container do Postgres.
 
 3. **Executando as DAGs**: As DAGs no diretório `dags/` contêm os fluxos de trabalho para processar e consolidar os dados. Essas DAGs podem ser iniciadas manualmente ou agendadas automaticamente no Airflow.
-    - Incluir o arquivo raw [https://drive.google.com/file/d/1NEzvkoYW7x2eygy5Jdfc-4owXL0wzjOw/view](caduceus.consolidation_anonymized) na pasta `dags/core/raw/`, que não foi incluído por conta do tamanho no github.
+    - Incluir o arquivo raw [caduceus.consolidation_anonymized](https://drive.google.com/file/d/1NEzvkoYW7x2eygy5Jdfc-4owXL0wzjOw/view) na pasta `dags/core/raw/`, que não foi incluído por conta do tamanho no github.
 
 ## Estrutura das DAGs
 
